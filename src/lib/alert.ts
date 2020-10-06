@@ -1,9 +1,20 @@
-import html from '../templates/alert.html';
+// import html from '../templates/alert.html';
 import { Options } from '../types/options';
 
 export const softAlert = (options: Options) => {
   let body: HTMLBodyElement = document.querySelector('body');
-  body.innerHTML += html;
+  body.innerHTML += `
+  <style scoped>
+    @import url('../templates/css/style.css');
+  </style>
+  <div class="soft-alert" id="soft-alert">
+    <div class="soft-alert-title" id="soft-alert-title"></div>
+    <div class="soft-alert-message" id="soft-alert-message"></div>
+    <div class="soft-alert-actions" id="soft-alert-actions">
+      <button>OK</button>
+    </div>
+  </div>  
+  `;
   const title: HTMLDivElement = document.querySelector('#soft-alert-title');
   const message: HTMLDivElement = document.querySelector('#soft-alert-message');
   const actions: HTMLDivElement = document.querySelector('#soft-alert-actions');
