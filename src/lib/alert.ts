@@ -7,7 +7,19 @@ export const softAlert = (options: Options) => {
   <style scoped>
     @import url('../templates/css/style.css');
   </style>
-  <div class="soft-alert" id="soft-alert">
+  <div
+  class="soft-alert"
+  style="
+    background-color: burlywood;
+    border: 1px solid black;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    top: 0;
+    margin: 0 auto;
+  "
+  id="soft-alert"
+  >
     <div class="soft-alert-title" id="soft-alert-title"></div>
     <div class="soft-alert-message" id="soft-alert-message"></div>
     <div class="soft-alert-actions" id="soft-alert-actions">
