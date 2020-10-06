@@ -2,5 +2,7 @@
   background-color: burlywood;
   border: 1px solid black;
   position: fixed;
+  height: 300px;
+  width: 300px;
   top: 0;
 }
